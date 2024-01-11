@@ -1,0 +1,36 @@
+import java.util.Scanner;
+
+class Magic
+{
+public static void main(String args[])
+{
+Scanner sc=new Scanner(System.in);
+System.out.println("enter any number");
+int a=sc.nextInt();
+int a1=a;
+int sum=0;
+
+    while(a1>0 ||sum>9)
+ {
+      if(a1==0)
+      {
+      a1=sum;
+      sum=0;
+      }
+int rem=a1%10;
+sum=sum+rem;
+a1=a1/10;
+}
+    System.out.println(sum);
+
+    if(sum==1)
+    {
+    System.out.println("number is magic");
+    }
+    else
+    {
+    System.out.println("number is not magic");
+    }
+ }
+}
+
